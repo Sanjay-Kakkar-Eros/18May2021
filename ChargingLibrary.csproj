@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DE7CDE34-E910-4614-922E-118B91A82A2C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.ChargingLibrary</RootNamespace>
+    <AssemblyName>ChargingLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices.Auth, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.Auth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VcgLib">
+      <HintPath>..\..\ThirdPartyLibraries\VcgLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Chargers\AirtelAfricaCharger.cs" />
+    <Compile Include="Chargers\AirtelSapiCharger.cs" />
+    <Compile Include="Chargers\AirtelSrilankaOCSCharger.cs" />
+    <Compile Include="Chargers\AirtelSubEngCharger.cs" />
+    <Compile Include="Chargers\AxiataAOCCharger.cs" />
+    <Compile Include="Chargers\AxiataAOCDirectCharger.cs" />
+    <Compile Include="Chargers\AxiataCharger.cs" />
+    <Compile Include="Chargers\DialogCgCharger.cs" />
+    <Compile Include="Chargers\DigicelFJCharger.cs" />
+    <Compile Include="Chargers\DigiOTTCharger.cs" />
+    <Compile Include="Chargers\DimocoCharger.cs" />
+    <Compile Include="Chargers\DuTimweCharger.cs" />
+    <Compile Include="Chargers\FooCharger.cs" />
+    <Compile Include="Chargers\HutchSrilankaCharger.cs" />
+    <Compile Include="Chargers\HutchSriLankaChargerV1.cs" />
+    <Compile Include="Chargers\KioskTlCharger.cs" />
+    <Compile Include="Chargers\MalaysianCharger.cs" />
+    <Compile Include="Chargers\MaxisNdsCharger.cs" />
+    <Compile Include="Chargers\MBasCharger.cs" />
+    <Compile Include="Chargers\MobitelGamesCharger.cs" />
+    <Compile Include="Chargers\MobitelSrilankaCharger.cs" />
+    <Compile Include="Chargers\MondiaCharger.cs" />
+    <Compile Include="Chargers\OoredooKwtCharger.cs" />
+    <Compile Include="Chargers\QaTimweChargerV3.cs" />
+    <Compile Include="Chargers\OoredooTimweCharger.cs" />
+    <Compile Include="Chargers\QaTimweChargerV4.cs" />
+    <Compile Include="Chargers\OoredooTimweChargerV1.cs" />
+    <Compile Include="Chargers\TelenorDigiCharger.cs" />
+    <Compile Include="Chargers\TimweDCBChargers.cs" />
+    <Compile Include="Chargers\TimweSmscCharger.cs" />
+    <Compile Include="Chargers\TpayCharger.cs" />
+    <Compile Include="Chargers\UMobileCharger.cs" />
+    <Compile Include="Chargers\SagSdpCharger.cs" />
+    <Compile Include="Chargers\DialogService\DialogService.cs" />
+    <Compile Include="Chargers\EtisalatHttpCharger.cs" />
+    <Compile Include="Chargers\GenericHttpCharger.cs" />
+    <Compile Include="Chargers\SmscCharger.cs" />
+    <Compile Include="Chargers\UmobileOTTCharger.cs" />
+    <Compile Include="Chargers\UninorHelpers\TunnelParameters.cs" />
+    <Compile Include="Chargers\MtnAfghanistanCharger.cs" />
+    <Compile Include="Chargers\VodaTimweCharger.cs" />
+    <Compile Include="ChargingClients\AirtelAfricaChargingClient.cs" />
+    <Compile Include="ChargingClients\AirtelSapiClient.cs" />
+    <Compile Include="ChargingClients\AirtelSrilankaOcsChargingClient.cs" />
+    <Compile Include="ChargingClients\AirtelSubEngChargingClient.cs" />
+    <Compile Include="ChargingClients\AxiataAOCChargingClient.cs" />
+    <Compile Include="ChargingClients\AxiataAOCDirectChargingClient.cs" />
+    <Compile Include="ChargingClients\AxiataChargingClient.cs" />
+    <Compile Include="ChargingClients\DialogCgChargingClient.cs" />
+    <Compile Include="ChargingClients\DigicelFJChargingClient.cs" />
+    <Compile Include="ChargingClients\DigiOTTChargingClient.cs" />
+    <Compile Include="ChargingClients\DimocoChargingClient.cs" />
+    <Compile Include="ChargingClients\DuTimweChargingClient.cs" />
+    <Compile Include="ChargingClients\FooChargingClient.cs" />
+    <Compile Include="ChargingClients\HutchSrilankaChargingClient.cs" />
+    <Compile Include="ChargingClients\HutchSriLankaChargingClientV1.cs" />
+    <Compile Include="ChargingClients\KioskTlChargingClient.cs" />
+    <Compile Include="ChargingClients\MalaysianChargingClient.cs" />
+    <Compile Include="ChargingClients\MaxisNdsChargingClient.cs" />
+    <Compile Include="ChargingClients\MBasChargingClient.cs" />
+    <Compile Include="ChargingClients\MobitelGamesChargingClient.cs" />
+    <Compile Include="ChargingClients\MobitelSrilankaChargingClient.cs" />
+    <Compile Include="ChargingClients\Mondia.cs" />
+    <Compile Include="ChargingClients\OoredooKwtChargingClient.cs" />
+    <Compile Include="ChargingClients\OoredooTimweChargingClient.cs" />
+    <Compile Include="ChargingClients\QaTimweChargingClientV2.cs" />
+    <Compile Include="ChargingClients\OoredooTimweChargingClientV1.cs" />
+    <Compile Include="ChargingClients\TelenorDigiChargingClient.cs" />
+    <Compile Include="ChargingClients\TimweDCBChargingClient.cs" />
+    <Compile Include="ChargingClients\TimweSmscChargingClient.cs" />
+    <Compile Include="ChargingClients\TpayChargingClient.cs" />
+    <Compile Include="ChargingClients\UMobileChargingClient.cs" />
+    <Compile Include="ChargingClients\SagSdpChargingClient.cs" />
+    <Compile Include="ChargingClients\EtisalatHttpChargingClient.cs" />
+    <Compile Include="ChargingClients\UmobileOTTChargingClient.cs" />
+    <Compile Include="ChargingClients\MtnAfghanistanChargingClient.cs" />
+    <Compile Include="ChargingClients\VodaTimweChargingClient.cs" />
+    <Compile Include="ChargingFactory.cs" />
+    <Compile Include="ChargingGatewayDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChargingGatewayDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ChargingRequest.cs" />
+    <Compile Include="ChargingResponse.cs" />
+    <Compile Include="ChargingClients\GenericHttpChargingClient.cs" />
+    <Compile Include="ChargingClients\SmscChargingClient.cs" />
+    <Compile Include="DataAccessLayer.cs" />
+    <Compile Include="Entities.cs">
+      <DependentUpon>Entities.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entities.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\MtnNigeria\DataSync\DataSyncInterface.cs" />
+    <Compile Include="GeneratedCode\MtnNigeria\SvcManagement\ServiceManagementInterface.cs" />
+    <Compile Include="IChargingClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AirtelSubEngineNotifyService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CBSAccountMgrService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HutchSrilankaReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MobitelServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TpayStagingServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\2. Client Layer\MessagingGatewayClient\MessagingGatewayClient.csproj">
+      <Project>{D67B0AB9-AAAA-40D6-AAF4-98A8A73AED5E}</Project>
+      <Name>MessagingGatewayClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\5. Data Layer\Framework.Data\Framework.Data.csproj">
+      <Project>{2f05550e-5701-4007-8d85-bdbccba093ed}</Project>
+      <Name>Framework.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Core\Framework.Core.csproj">
+      <Project>{6F6203C1-9DD0-48A6-84D3-6FE178949696}</Project>
+      <Name>Framework.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ChargingGatewayDataSet.xsc">
+      <DependentUpon>ChargingGatewayDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ChargingGatewayDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChargingGatewayDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ChargingGatewayDataSet.xss">
+      <DependentUpon>ChargingGatewayDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GeneratedCode\ClassDiagram1.cd" />
+    <None Include="Entities.xsc">
+      <DependentUpon>Entities.xsd</DependentUpon>
+    </None>
+    <None Include="Entities.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Entities.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Entities.xss">
+      <DependentUpon>Entities.xsd</DependentUpon>
+    </None>
+    <None Include="obj\Debug\ChargingLibrary.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\build.force" />
+    <None Include="obj\Release\ChargingLibrary.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AirtelSubEngineNotifyService\CallSubscription.wsdl" />
+    <None Include="Service References\AirtelSubEngineNotifyService\Framework.ChargingLibrary.AirtelSubEngineNotifyService.CPNotificationRespDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\CBSInterfaceAccountMgrService.wsdl" />
+    <None Include="Service References\CBSAccountMgrService\CBSInterfaceAccountMgrService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\CBSInterfaceAccountMgrService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.ActiveFirstResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.AdjustAccountResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.AdjustSubAccountResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.BalanceToValidityResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.CumulateEnquiryResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.ExchangeAccountResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.LoanManageResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.ModifyBalanceResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.ModifyVerifyResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.ModifyVoucherStateResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.ModSubBillCycleTypeResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.OneOffDeductionResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.PaymentEnquiryResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.PaymentResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.QueryAdjustmentLogResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.QueryBalanceResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.QueryBonusAcctResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.QueryBucketAcctResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.QueryRealTimeCDRResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.QueryTransferLogResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.ReversePaymentResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.ServiceHandleFeeResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.SubAccountRechargeResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.TransferAccountResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.TransferToResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.TransInPpsPosResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.VoucherEnquiryByPINResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.VoucherEnquiryBySeqResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.VoucherRechargeBySeqResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.VoucherRechargeEnquiryResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBSAccountMgrService\Framework.ChargingLibrary.CBSAccountMgrService.VoucherRechargeResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HutchSrilankaReference\ccws.wsdl" />
+    <None Include="Service References\MobitelServiceReference\Framework.ChargingLibrary.MobitelServiceReference.chargeFromMSISDNResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobitelServiceReference\Framework.ChargingLibrary.MobitelServiceReference.chargeFromMSISDNResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobitelServiceReference\Framework.ChargingLibrary.MobitelServiceReference.checkPrepaidBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobitelServiceReference\Framework.ChargingLibrary.MobitelServiceReference.checkPrepaidBalanceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobitelServiceReference\Framework.ChargingLibrary.MobitelServiceReference.helloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobitelServiceReference\Framework.ChargingLibrary.MobitelServiceReference.helloResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobitelServiceReference\Framework.ChargingLibrary.MobitelServiceReference.msisdnInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobitelServiceReference\Framework.ChargingLibrary.MobitelServiceReference.msisdnInfoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MobitelServiceReference\MCAccMgr.wsdl" />
+    <None Include="Service References\TpayStagingServiceReference\Framework.ChargingLibrary.TpayStagingServiceReference.cancelSubscriptionContractResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TpayStagingServiceReference\Framework.ChargingLibrary.TpayStagingServiceReference.directPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TpayStagingServiceReference\Framework.ChargingLibrary.TpayStagingServiceReference.EncryptedMsisdnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TpayStagingServiceReference\Framework.ChargingLibrary.TpayStagingServiceReference.modifySubscriptionContractResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TpayStagingServiceReference\Framework.ChargingLibrary.TpayStagingServiceReference.subscriptionContractResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TpayStagingServiceReference\Framework.ChargingLibrary.TpayStagingServiceReference.subscriptionContractShadow.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TpayStagingServiceReference\Framework.ChargingLibrary.TpayStagingServiceReference.subscriptionContractVerificationSMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TpayStagingServiceReference\Framework.ChargingLibrary.TpayStagingServiceReference.subscriptionPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TpayStagingServiceReference\TPaySubscription3.wsdl" />
+    <None Include="Service References\TpayStagingServiceReference\TPaySubscription3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TpayStagingServiceReference\TPaySubscription31.wsdl" />
+    <None Include="Service References\TpayStagingServiceReference\TPaySubscription31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TpayStagingServiceReference\TPaySubscription32.wsdl" />
+    <None Include="Service References\TpayStagingServiceReference\TPaySubscription32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AirtelSubEngineNotifyService\" />
+    <WCFMetadataStorage Include="Service References\CBSAccountMgrService\" />
+    <WCFMetadataStorage Include="Service References\HutchSrilankaReference\" />
+    <WCFMetadataStorage Include="Service References\MobitelServiceReference\" />
+    <WCFMetadataStorage Include="Service References\TpayStagingServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AirtelSubEngineNotifyService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AirtelSubEngineNotifyService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AirtelSubEngineNotifyService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CBSAccountMgrService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CBSAccountMgrService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CBSAccountMgrService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="Chargers\TigoService\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Service References\DialogService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\ChargingLibrary.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\ChargingLibrary.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\TempPE\Service References.DialogCGWebService.Reference1.cs.dll" />
+    <Content Include="obj\Release\TempPE\Service References.HutchSrilankaReference.Reference1.cs.dll" />
+    <Content Include="obj\Release\TempPE\Service References.MobitelServiceReference.Reference1.cs.dll" />
+    <Content Include="obj\Release\TempPE\Service References.TestHutchSrilankaServiceReference.Reference1.cs.dll" />
+    <None Include="Service References\MobitelServiceReference\configuration.svcinfo" />
+    <None Include="Service References\TpayStagingServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TpayStagingServiceReference\configuration.svcinfo" />
+    <None Include="Service References\TpayStagingServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\MobitelServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MobitelServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\HutchSrilankaReference\configuration91.svcinfo" />
+    <None Include="Service References\HutchSrilankaReference\configuration.svcinfo" />
+    <None Include="Service References\HutchSrilankaReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
